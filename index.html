@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang='en'>
+ <head>
+  <title>Find elevation based on your location (US only currently)</title>
+  <meta charset='utf-8'>
+ </head>
+ <body>
+    <h1>Find elevation based on your location (US only currently)</h1>
+    Longitude: <input type="number" id="longitude" size="20">
+    <br>
+    Latitude: <input type="number" id="latitude" size="20">
+    <br>
+    <button id="coordinates-button">Find coordinates</button>
+    <button id="altitude-button">Find altitude</button>
+    <select id="units">
+        <option value="Feet">Feet</option>
+        <option value="Meters">Meters</option>
+    </select>
+    <br>
+    <div id="answer-area" style="margin-top: 10px"></div>
+    <p>
+        <small>
+            Uses the <a href="https://apps.nationalmap.gov/epqs/">The National Map -
+                Elevation Point Query Service</a>. This means it's limited to
+                locations within the US.
+        </small>
+    </p>
+    <script src="elevation.js"></script>
+ </body>
+</html>
