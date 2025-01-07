@@ -13,7 +13,7 @@ async function findElevation() {
     }
     const json = await response.json();
     const {x, y} = json.location;
-    // `value` seems to a string for "Meters"; convert to float.
+    // `value` seems to be a string for "Meters"; convert to float.
     const elevation = parseFloat(json.value).toFixed(1);
     answerArea.innerHTML = `Elevation: <b>${elevation} ${unitsInput.value.toLowerCase()}</b>` +
         ` for <a href="http://www.openstreetmap.org/?mlat=${y}&mlon=${x}&zoom=12">${x}, ${y}</a>.`;
